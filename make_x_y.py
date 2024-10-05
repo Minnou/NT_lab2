@@ -25,18 +25,21 @@ def main():
     filename = input()
     if filename.strip() == "":
         filename = "./dataset.csv"
-    print("Введите путь до файла с датами (./x.csv): ", end="")
     
+    print("Введите путь до файла с датами (./x.csv): ", end="")
     x_file = input()
     if x_file.strip() == "":
         x_file = "./x.csv"
-    print("Введите путь до файла с ценами (./y.csv): ", end="")
     
+    print("Введите путь до файла с ценами (./y.csv): ", end="")
     y_file = input()
     if y_file.strip() == "":
         y_file = "./y.csv"
     
-    make_x_y(filename=filename, x_file=x_file, y_file=y_file)
+    if make_x_y(filename=filename, x_file=x_file, y_file=y_file):
+         print("Успех")
+    else:
+        print("Провал")
 
 if __name__ == '__main__':
     main()
