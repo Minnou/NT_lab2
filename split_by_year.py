@@ -2,6 +2,14 @@ import re
 import os
 
 def split_by_year(filename="./dataset.csv", result_folder=""):
+    """Split dataset by years creating multiple csv files
+
+    Args:
+        filename: path to the original dataset
+        result_folder: path to the folder where result files will be stored
+    Returns:
+        True if successful False if not
+    """
     file = open(filename, "r")
     dates = []
     values = []

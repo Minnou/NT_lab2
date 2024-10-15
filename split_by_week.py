@@ -2,6 +2,14 @@ import os
 import datetime
 
 def split_by_week(filename="./dataset.csv", result_folder=""):
+    """Split dataset by weeks creating multiple csv files
+
+    Args:
+        filename: path to the original dataset
+        result_folder: path to the folder where result files will be stored
+    Returns:
+        True if successful False if not
+    """
     file = open(filename, "r")
     dates = []
     values = []

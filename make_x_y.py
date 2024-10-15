@@ -1,4 +1,13 @@
 def make_x_y(filename="./dataset.csv", x_file ="./x.csv", y_file = "./y.csv"):
+    """Create x and y csv files from the original dataset
+
+    Args:
+        filename: path to the original dataset
+        x_file: path to x file
+        y_file: path to y file
+    Returns:
+        True if successful False if not
+    """
     file = open(filename, "r")
     dates_file = open(x_file, "w+")
     values_file = open(y_file, "w+")
