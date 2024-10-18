@@ -54,7 +54,6 @@ def get_value(date: str, files: list):
     """
     data_frame = create_dataset_from_files(files)
     for index, line in DataFrameIterator(data_frame):
-        print(line.iloc[0])
         if line.iloc[0] == date:
             return line.iloc[1]
     return None
